@@ -2,31 +2,40 @@ define([
     'core/js/adapt',
     'backbone'
 ], function(Adapt, Backbone) {
-    
+
     var LanguagePickerDrawerView = Backbone.View.extend({
-        
+
         events: {
             'click button': 'onButtonClick'
         },
-        
+
         initialize: function () {
             this.listenTo(Adapt, 'remove', this.remove);
             this.listenTo(Adapt, 'languagepicker:changelanguage:yes', this.onDoChangeLanguage);
             this.listenTo(Adapt, 'languagepicker:changelanguage:no', this.onDontChangeLanguage);
             this.render();
         },
-        
+
         render: function () {
             var data = this.model.toJSON();
             var template = Handlebars.templates[this.constructor.template];
             this.$el.html(template(data));
         },
-        
+
         onButtonClick: function (event) {
             var newLanguage = $(event.target).attr('data-language');
             this.model.set('newLanguage', newLanguage);
+
+            if(this.model.get('_warningEnabled')) {
+              this.onShowWarning(newLanguage);
+            } else {
+              this.onDoChangeLanguage();
+            }
+        },
+
+        onShowWarning: function (newLanguage) {
             var data = this.model.getLanguageDetails(newLanguage);
-            
+
             var promptObject = {
                 _classes: "dir-ltr",
                 title: data.warningTitle,
@@ -47,7 +56,7 @@ define([
             if (data._direction === 'rtl') {
                 promptObject._classes = "dir-rtl";
             }
-            
+
             //keep active element incase the user cancels - usually navigation bar icon
             this.$finishFocus = $.a11y.state.focusStack.pop();
             //move drawer close focus to #focuser
@@ -69,14 +78,14 @@ define([
 
             Adapt.trigger('drawer:closeDrawer');
         },
-        
+
         onDoChangeLanguage: function () {
             // set default languge
             var newLanguage = this.model.get('newLanguage');
             this.model.setLanguage(newLanguage);
             this.remove();
         },
-        
+
         onDontChangeLanguage: function () {
             this.remove();
 
@@ -87,7 +96,7 @@ define([
             }, this), 500);
 
         }
-        
+
     }, {
         template: 'languagePickerDrawerView'
     });
