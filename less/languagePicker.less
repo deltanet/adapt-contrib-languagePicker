@@ -11,26 +11,32 @@ body {
 
 .languagepicker {
 	.languagepicker-inner {
-		
+
 		.responsive-layout;
-		
+
 		.languagepicker-title {
+			color: @primary-color-inverted;
 			margin: 0 1%;
-			padding: @menu-title-padding-top 0px @menu-title-padding-bottom;
+			padding: 0px;
 			.languagepicker-title-inner {
-				font-size: (@font-size*3);
+				text-align: center;
+        font-size: @page-title-font-size;
 				line-height: (@font-size*3 + 10px);
 			}
 		}
 		.languagepicker-body {
+			color: @primary-color-inverted;
+			text-align: center;
 			margin: 0 1%;
 			padding: @menu-body-padding-top 0px;
 			.languagepicker-body-inner {
 			}
 		}
 		.languagepicker-languages {
+			padding-bottom: 60px;
+      overflow-y: hidden;
 			.languagepicker-language {
-				margin: (@button-margin-top*0.5) 1% (@button-margin-bottom*0.5);
+				margin: 1%;
 				width: 48%;
 				float: left;
 				@media all and (max-width:(@device-width-small - 1px)) {
@@ -81,7 +87,7 @@ body {
 */
 .notify .notify-popup.notify-type-prompt {
 	text-align: inherit;
-	
+
 	&.dir-rtl {
 		direction: rtl;
 
@@ -89,7 +95,7 @@ body {
 			right: inherit;
 			left: 0;
 		}
-			
+
 		.notify-popup-title,
 		.notify-popup-body {
 			padding-left: 60px;
@@ -103,7 +109,7 @@ body {
 			right: 0;
 			left: inherit;
 		}
-			
+
 		.notify-popup-title,
 		.notify-popup-body {
 			padding-left: inherit;
