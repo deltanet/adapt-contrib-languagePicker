@@ -26,6 +26,11 @@ define([
             var newLanguage = $(event.target).attr('data-language');
             this.model.set('newLanguage', newLanguage);
 
+            //keep active element incase the user cancels - usually navigation bar icon
+            this.$finishFocus = $.a11y.state.focusStack.pop();
+            //move drawer close focus to #focuser
+            $.a11y.state.focusStack.push($("#focuser"));
+
             if(this.model.get('_warningEnabled')) {
               this.onShowWarning(newLanguage);
             } else {
@@ -57,11 +62,6 @@ define([
                 promptObject._classes = "dir-rtl";
             }
 
-            //keep active element incase the user cancels - usually navigation bar icon
-            this.$finishFocus = $.a11y.state.focusStack.pop();
-            //move drawer close focus to #focuser
-            $.a11y.state.focusStack.push($("#focuser"));
-
             Adapt.once('drawer:closed', function() {
                 //wait for drawer to fully close
                 _.delay(function(){
@@ -80,6 +80,22 @@ define([
         },
 
         onDoChangeLanguage: function () {
+
+            Adapt.once('drawer:closed', function() {
+                //wait for drawer to fully close
+                _.delay(function(){
+                    //show yes/no popup
+                    Adapt.once('popup:opened', function() {
+                        //move popup close focus to #focuser
+                        $.a11y.state.focusStack.pop();
+                        $.a11y.state.focusStack.push($("#focuser"));
+                    });
+
+                    Adapt.trigger('notify:prompt', promptObject);
+                }, 250);
+            });
+
+            Adapt.trigger('drawer:closeDrawer');
             // set default languge
             var newLanguage = this.model.get('newLanguage');
             this.model.setLanguage(newLanguage);
