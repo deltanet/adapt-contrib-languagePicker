@@ -80,21 +80,6 @@ define([
         },
 
         onDoChangeLanguage: function () {
-
-            Adapt.once('drawer:closed', function() {
-                //wait for drawer to fully close
-                _.delay(function(){
-                    //show yes/no popup
-                    Adapt.once('popup:opened', function() {
-                        //move popup close focus to #focuser
-                        $.a11y.state.focusStack.pop();
-                        $.a11y.state.focusStack.push($("#focuser"));
-                    });
-
-                    Adapt.trigger('notify:prompt', promptObject);
-                }, 250);
-            });
-
             Adapt.trigger('drawer:closeDrawer');
             // set default languge
             var newLanguage = this.model.get('newLanguage');
