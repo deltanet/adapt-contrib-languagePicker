@@ -5,7 +5,7 @@ body {
     	direction: rtl;
  	}
 	.dir-ltr & {
-    	direction: ltr;;
+    	direction: ltr;
 	}
 }
 
@@ -17,8 +17,9 @@ body {
 		.languagepicker-title {
 			color: @primary-color-inverted;
 			background-color: @primary-color;
-			margin: 0 1%;
-			padding: 0px;
+			margin: 0;
+			padding: @menu-body-padding-top;
+			padding-bottom: 0;
 			.languagepicker-title-inner {
 				text-align: center;
         font-size: @page-title-font-size;
@@ -29,20 +30,54 @@ body {
 			color: @primary-color-inverted;
 			background-color: @primary-color;
 			text-align: center;
-			margin: 0 1%;
-			padding: @menu-body-padding-top 0px;
+			margin: 0;
+			padding: @menu-body-padding-top;
+			padding-bottom: @menu-body-padding-top * 2;
 			.languagepicker-body-inner {
 			}
 		}
 		.languagepicker-languages {
-			padding-bottom: 60px;
+			margin-bottom: 60px;
       overflow-y: hidden;
+			background-color: @button-color;
 			.languagepicker-language {
-				margin: 1%;
-				width: 48%;
+				margin: 0;
+				width: 50%;
 				float: left;
+				padding-top: 20px;
+				padding-bottom: 20px;
 				@media all and (max-width:(@device-width-small - 1px)) {
-					width: 98%;
+					width: 100%;
+				}
+			}
+			&.inrow-1 {
+				.languagepicker-language {
+					width: 100%;
+				}
+			}
+			&.inrow-2 {
+				.languagepicker-language {
+					width: 50%;
+				}
+			}
+			&.inrow-3 {
+				.languagepicker-language {
+					@media all and (min-width:@device-width-medium) {
+						width: 50%;
+					}
+					@media all and (min-width:@device-width-large) {
+						width: 33%;
+					}
+				}
+			}
+			&.inrow-4 {
+				.languagepicker-language {
+					@media all and (min-width:@device-width-medium) {
+						width: 33%;
+					}
+					@media all and (min-width:@device-width-large) {
+						width: 25%;
+					}
 				}
 			}
 		}

@@ -89,6 +89,15 @@
                   "validators": [],
                   "help": "Controls whether the warning prompt is enabled or disabled."
                 },
+                "_inRow": {
+                  "type": "number",
+                  "required": false,
+                  "inputType": "Number",
+                  "title": "Number of columns on menu",
+                  "default": 2,
+                  "validators": ["number"],
+                  "help": "Sets the number of language buttons in each column."
+                },
                 "_classes": {
                   "type": "string",
                   "required": false,
