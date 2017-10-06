@@ -55,7 +55,7 @@ define([
                         _callbackEvent: "languagepicker:changelanguage:no"
                     }
                 ],
-                _showIcon: true
+                _showIcon: false
             };
 
             if (data._direction === 'rtl') {
