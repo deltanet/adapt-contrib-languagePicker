@@ -45,6 +45,17 @@
               }
         },
         {
+          "_language": "frca",
+          "_direction": "ltr",
+          "displayName": "Français canadien",
+          "warningTitle": "Changer de langue?",
+          "warningMessage": "Changer de langue réinitialisera la progression du cours.<br><br>Voulez-vous poursuivre?",
+          "_buttons": {
+              "yes": "Oui",
+              "no": "Non"
+              }
+        },
+        {
               "_language": "pt",
               "_direction": "ltr",
               "displayName": "Português",
@@ -144,6 +155,39 @@
             }
         },
         {
+            "_language": "he",
+            "_direction": "rtl",
+            "displayName": "עִברִית",
+            "warningTitle": "האם לשנות שפה?",
+            "warningMessage": "שינוי השפה יאפס את ההתקדמות בקורס. האם ברצונך להמשיך?",
+            "_buttons": {
+                "yes": "כן",
+                "no": "לא"
+            }
+        },
+        {
+          "_language": "hi",
+          "_direction": "ltr",
+          "displayName": "हिंदी",
+          "warningTitle": "भाषा बदलें?",
+          "warningMessage": "भाषा बदलने से कोर्स की प्रगति फिर से सेट हो जाएगी। <br><br>क्या आप आगे बढ़ना चाहेंगे?",
+          "_buttons": {
+              "yes": " हाँ",
+              "no": "नहीं"
+              }
+        },
+        {
+         "_language": "mr",
+         "_direction": "ltr",
+         "displayName": "मराठी",
+         "warningTitle": "भाषा बदलायची ?",
+         "warningMessage": "भाषा बदलल्यामुळे कोर्सची प्रगती रिसेट होईल.<br><br>तुम्हाला पुढे जायचे आहे का?",
+         "_buttons": {
+             "yes": "होय",
+             "no": "नाही"
+             }
+       },
+        {
              "_language": "id",
              "_direction": "ltr",
              "displayName": "Bahasa Indonesia",
@@ -154,6 +198,17 @@
                 "no": "Tidak"
              }
         },
+        {
+         "_language": "ms",
+         "_direction": "ltr",
+         "displayName": "Malay",
+         "warningTitle": "Tukar bahasa?",
+         "warningMessage": "Penukaran bahasa akan mengeset semula perkembangan kursus.<br><br>Anda mahu teruskan?",
+         "_buttons": {
+             "yes": "Ya",
+             "no": "Tidak"
+             }
+       },
         {
                 "_language": "tr",
                 "_direction": "ltr",
@@ -210,6 +265,17 @@
             }
         },
         {
+         "_language": "mk",
+         "_direction": "ltr",
+         "displayName": "Македонски",
+         "warningTitle": "Избери јазик?",
+         "warningMessage": "Менувањето на јазикот ќе го ресетира напредокот на курсот.<br><br>Сакате да продолжите?",
+         "_buttons": {
+             "yes": "Да",
+             "no": "Не"
+             }
+       },
+        {
             "_language": "pl",
             "_direction": "ltr",
             "displayName": "Polski",
@@ -241,6 +307,17 @@
                 "yes": "Ja",
                 "no": "Nej"
             }
+        },
+        {
+          "_language": "fi",
+          "_direction": "ltr",
+          "displayName": "Suomi",
+          "warningTitle": "Vaihdetaanko kieltä?",
+          "warningMessage": "Kielen vaihdon jälkeen joudut aloittamaan kurssin alusta.<br><br>Tahdotko kuitenkin jatkaa?",
+          "_buttons": {
+              "yes": "Kyllä",
+              "no": "Ei"
+              }
         },
         {
             "_language": "esmx",
