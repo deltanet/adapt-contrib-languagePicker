@@ -38,7 +38,7 @@ The following attributes are set within *config.json*.
 
 >**\_isEnabled** (boolean): Turns the **Language Picker** extension on and off. Acceptable values are `true` and `false`.
 
->**title** (string): Browser window title text. For example, "Language selection". 
+>**title** (string): Browser window title text. For example, "Language selection".
 
 >**displayTitle** (string): Header text. For example, "Please select a language."
 
@@ -52,15 +52,15 @@ The following attributes are set within *config.json*.
 
 >**\_languages** (object):  The languages attribute group contains properties related to the available languages.   It contains values for **\_language**, **\_direction**, **displayName**, **warningTitle**, **warningMessage**, and **\_buttons**.  
 
->>**\_language** (string): This text must match the name of the language-specific folder located in the course root, for example, "en" from *course/en*. It is used as the value for the HTML `lang` attribute. It is highly recommended that codes for web languages be used. Reference a source such as the [IANA Language Subtag Registry](http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry). 
+>>**\_language** (string): This text must match the name of the language-specific folder located in the course root, for example, "en" from *course/en*. It is used as the value for the HTML `lang` attribute. It is highly recommended that codes for web languages be used. Reference a source such as the [IANA Language Subtag Registry](http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).
 
->>**\_direction** (string): Specifies the value of the HTML `dir` attribute and, consequently, the base direction of text. Acceptable values are `"rtl"` (right-to-left) and `"ltr"` (left-to-right). 
+>>**\_direction** (string): Specifies the value of the HTML `dir` attribute and, consequently, the base direction of text. Acceptable values are `"rtl"` (right-to-left) and `"ltr"` (left-to-right).
 
 >>**displayName** (string): Use this text to identify the full name of the language. This value is used as the button label.  
 
 >>**warningTitle** (string): This text appears as the header of the dialog confirming the learner's intent to change languages, for example, "Change language?".
 
->>**warningMessage** (string): This text appears as the body of the dialog confirming the learner's intent to change languages, for example, "Changing the language will reset course progress.&lt;br&gt;&lt;br&gt;Would you like to proceed?". 
+>>**warningMessage** (string): This text appears as the body of the dialog confirming the learner's intent to change languages, for example, "Changing the language will reset course progress.&lt;br&gt;&lt;br&gt;Would you like to proceed?".
 
 >>**\_buttons** (object): The buttons attribute group stores the label values for the dialog buttons. It contains values for **yes** and **no**.  
 
@@ -71,17 +71,17 @@ The following attributes are set within *config.json*.
 <div float align=right><a href="#top">Back to Top</a></div>
 
 ## Limitations
- 
-- If the [**Spoor**](https://github.com/adaptlearning/adapt-contrib-spoor) extension is disabled (or not installed), **Language Picker** will not remember the learner's language choice from the previous session. 
+
+- If the [**Spoor**](https://github.com/adaptlearning/adapt-contrib-spoor) extension is disabled (or not installed), **Language Picker** will not remember the learner's language choice from the previous session.
 
 - Switching languages during an [**Assessment**](https://github.com/adaptlearning/adapt-contrib-assessment) will reset assessment attempts.  
 
 - Language Picker is not yet compatible with the Adapt Authoring Tool.
 
 ----------------------------
-**Version number:**  4.1.0  <a href="https://community.adaptlearning.org/" target="_blank"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo-mrgn-lft.jpg" alt="adapt learning logo" align="right"></a>  
+**Version number:**  4.0.0  <a href="https://community.adaptlearning.org/" target="_blank"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo-mrgn-lft.jpg" alt="adapt learning logo" align="right"></a>  
 **Framework versions:**  5.6+  
 **Author / maintainer:** Adapt Core Team with [contributors](https://github.com/adaptlearning/adapt-contrib-bookmarking/graphs/contributors)  
 **Accessibility support:** WAI AA  
 **RTL support:** Yes  
-**Cross-platform coverage:** Chrome, Chrome for Android, Firefox (ESR + latest version), Edge, IE11, Safari 12+13 for macOS/iOS/iPadOS, Opera  
+**Cross-platform coverage:** Chrome, Chrome for Android, Firefox (ESR + latest version), Edge, IE11, Safari 12+13 for macOS/iOS/iPadOS  

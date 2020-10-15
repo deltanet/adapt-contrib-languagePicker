@@ -5,6 +5,47 @@
   &__inner {
     .l-container-responsive(@device-width-large);
   }
+
+  &__languages {
+		.languagepicker__language-btn {
+			margin: 1%;
+			width: 48%;
+			float: left;
+			@media all and (max-width:(@device-width-small - 1px)) {
+				width: 98%;
+			}
+		}
+		&.inrow-1 {
+			.languagepicker__language-btn {
+				width: 98%;
+			}
+		}
+		&.inrow-2 {
+			.languagepicker__language-btn {
+				width: 48%;
+			}
+		}
+		&.inrow-3 {
+			.languagepicker__language-btn {
+				@media all and (min-width:@device-width-medium) {
+					width: 48%;
+				}
+				@media all and (min-width:@device-width-large) {
+					width: 31%;
+				}
+			}
+		}
+		&.inrow-4 {
+			.languagepicker__language-btn {
+				@media all and (min-width:@device-width-medium) {
+					width: 31%;
+				}
+				@media all and (min-width:@device-width-large) {
+					width: 23%;
+				}
+			}
+		}
+  }
 }
 // --------------------------------------------------
 

@@ -88,6 +88,24 @@
                   "validators": [],
                   "help": "Your default options here are: icon-globe, icon-language-1, icon-language-2"
                 },
+                "_warningEnabled": {
+                  "type": "boolean",
+                  "required": false,
+                  "default": true,
+                  "title": "Warning prompt is enabled",
+                  "inputType": "Checkbox",
+                  "validators": [],
+                  "help": "Controls whether the warning prompt is enabled or disabled."
+                },
+                "_inRow": {
+                  "type": "number",
+                  "required": false,
+                  "inputType": "Number",
+                  "title": "Number of columns on menu",
+                  "default": 2,
+                  "validators": ["number"],
+                  "help": "Sets the number of language buttons in each column."
+                },
                 "_restoreStateOnLanguageChange": {
                   "type": "boolean",
                   "required": true,

@@ -2,12 +2,12 @@
   "name": "adapt-contrib-languagePicker",
   "repository": {
     "type":"git",
-    "url": "git://github.com/adaptlearning/adapt-contrib-languagePicker.git"
+    "url": "git://github.com/deltanet/adapt-contrib-languagePicker.git"
   },
-  "version": "4.1.0",
+  "version": "4.0.0",
   "framework": ">=5.6",
-  "homepage": "https://github.com/adaptlearning/adapt-contrib-languagePicker",
-  "issues": "https://github.com/adaptlearning/adapt_framework/issues/new",
+  "homepage": "https://github.com/deltanet/adapt-contrib-languagePicker",
+  "issues": "https://github.com/deltanet/adapt_framework/issues/new",
   "extension": "languagePicker",
   "displayName": "Language Picker",
   "description": "An extension to allow the learner to select the course language in multi-language course",
