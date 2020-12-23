@@ -41,12 +41,16 @@ define([
         var storedLanguage = Adapt.offlineStorage.get('lang');
 
         if (storedLanguage) {
-            languagePickerModel.setLanguage(storedLanguage);
-        } else if (languagePickerModel.get('_showOnCourseLoad') === false) {
-            languagePickerModel.setLanguage(Adapt.config.get('_defaultLanguage'));
-        } else {
-            showLanguagePickerView();
+          languagePickerModel.setLanguage(storedLanguage);
+          return;
         }
+
+        if (languagePickerModel.get('_showOnCourseLoad') === false) {
+          languagePickerModel.setLanguage(Adapt.config.get('_defaultLanguage'));
+          return;
+        }
+
+        showLanguagePickerView();
     }
 
     function showLanguagePickerView () {
