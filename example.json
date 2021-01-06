@@ -1,40 +1,393 @@
-    // To go in config.json
-    "_languagePicker": {
-        "_isEnabled": true,
-        "title": "Language selection",
-        "displayTitle": "Please select a language",
-        "body": "This course is available in the following languages:",
-        "_showOnCourseLoad": true,
-        "_comment": "default class names are: icon-globe, icon-language-1, icon-language-2",
-        "_languagePickerIconClass": "icon-language-2",
-        "_warningEnabled": true,
-        "_inRow": 2,
-        "_restoreStateOnLanguageChange": false,
-        "_languages": [
-            {
-                "_language": "en",
-                "_direction": "ltr",
-                "displayName": "English",
-                "warningTitle": "Change language?",
-                "warningMessage": "Changing the language will reset course progress.<br><br>Would you like to proceed?",
-                "_buttons": {
-                    "yes": "Yes",
-                    "no": "No"
-                }
-            },
-            {
-                "_language": "de",
-                "_direction": "ltr",
-                "displayName": "Deutsch",
-                "warningTitle": "Sprache ändern?",
-                "warningMessage": "Ändern der Sprache wird den Fortschritt des Kurses zurücksetzen.<br><br>Möchte Sie fortfahren?",
-                "_buttons": {
-                    "yes": "Ja",
-                    "no": "Nein"
-                }
+// To go in config.json
+
+"_languagePicker": {
+    "_isEnabled": true,
+    "title": "Language selection",
+    "displayTitle": "Please select a language",
+    "body": "This course is available in the following languages:",
+    "_showOnCourseLoad": true,
+    "_comment": "default class names are: icon-globe, icon-language-1, icon-language-2",
+    "_languagePickerIconClass": "icon-language-2",
+    "_warningEnabled": true,
+    "_inRow": 4,
+    "_restoreStateOnLanguageChange": false,
+    "_languages": [
+        {
+            "_language": "en",
+            "_direction": "ltr",
+            "displayName": "English",
+            "warningTitle": "Change language?",
+            "warningMessage": "Changing the language will reset course progress. Would you like to proceed?",
+            "_buttons": {
+                "yes": "Yes",
+                "no": "No"
             }
-        ]
-    }
+        },
+        {
+            "_language": "bg",
+            "_direction": "ltr",
+            "displayName": "Български език",
+            "warningTitle": "Смяна на езика?",
+            "warningMessage": "Смяната на езика ще изтрие досегашните ви резултати. Желаете ли да продължите?",
+            "_buttons": {
+                "yes": "да",
+                "no": "Не"
+            }
+        },
+        {
+              "_language": "fr",
+              "_direction": "ltr",
+              "displayName": "Français",
+              "warningTitle": "Changer la langue ?",
+              "warningMessage": "Le changement de la langue réinitialisera la progression du cours ?",
+              "_buttons": {
+                  "yes": "Oui",
+                  "no": "Non"
+              }
+        },
+        {
+          "_language": "frca",
+          "_direction": "ltr",
+          "displayName": "Français canadien",
+          "warningTitle": "Changer de langue?",
+          "warningMessage": "Changer de langue réinitialisera la progression du cours.<br><br>Voulez-vous poursuivre?",
+          "_buttons": {
+              "yes": "Oui",
+              "no": "Non"
+              }
+        },
+        {
+              "_language": "pt",
+              "_direction": "ltr",
+              "displayName": "Português",
+              "warningTitle": "Alterar idioma?",
+              "warningMessage": "Alterar o idioma redefinirá o progresso do curso. Deseja prosseguir?",
+              "_buttons": {
+                  "yes": "Sim",
+                  "no": "Não"
+            }
+        },
+            {
+            "_language": "cz",
+            "_direction": "ltr",
+            "displayName": "Čestina",
+            "warningTitle": "Změnit jazyk?",
+            "warningMessage": "Změna jazyka vrátí průběh kurzu na začátek. Chcete pokračovat?",
+            "_buttons": {
+                "yes": "Ano",
+                "no": "Ne"
+            }
+        },
+        {
+            "_language": "de",
+            "_direction": "ltr",
+            "displayName": "Deutsch",
+            "warningTitle": "Sprache ändern?",
+            "warningMessage": "Der Wechsel der Sprache setzt den Kursfortschritt zurück. Möchten Sie fortfahren?",
+            "_buttons": {
+                "yes": "Ja",
+                "no": "Nein"
+            }
+        },
+        {
+            "_language": "gr",
+            "_direction": "ltr",
+            "displayName": "Ελληνικά",
+            "warningTitle": "Αλλαγή γλώσσας;",
+            "warningMessage": "Αλλάζοντας τη γλώσσα θα επαναφέρετε την πρόοδο του μαθήματος. Θέλετε να συνεχίσετε;",
+            "_buttons": {
+                "yes": "Ναι",
+                "no": "’Οχι"
+            }
+        },
+        {
+            "_language": "hu",
+            "_direction": "ltr",
+            "displayName": "Magyar",
+            "warningTitle": "Módosítja a nyelvet?",
+            "warningMessage": "A nyelv módosításával újraindítja a tanfolyamot.  Folytatja?",
+            "_buttons": {
+                "yes": "Igen",
+                "no": "Nem"
+            }
+        },
+        {
+            "_language": "it",
+            "_direction": "ltr",
+            "displayName": "Italiano",
+            "warningTitle": "Modifica lingua?",
+            "warningMessage": "La modifica della lingua reimposterà il progresso del corso. Continuare?",
+            "_buttons": {
+                "yes": "Sì",
+                "no": "No"
+            }
+        },
+        {
+            "_language": "ro",
+            "_direction": "ltr",
+            "displayName": "Română",
+            "warningTitle": "Doriţi să schimbaţi limba?",
+            "warningMessage": "Schimbarea limbii va reseta progresul cursului. Doriţi să continuaţi?",
+            "_buttons": {
+                "yes": "Da",
+                "no": "Nu"
+            }
+        },
+        {
+            "_language": "zhtw",
+            "_direction": "ltr",
+            "displayName": "繁體中文",
+            "warningTitle": "變更語言？",
+            "warningMessage": "變更語言會導致課程進度重設，確定要繼續嗎？",
+            "_buttons": {
+                "yes": "是",
+                "no": "否"
+            }
+        },
+        {
+            "_language": "zh",
+            "_direction": "ltr",
+            "displayName": "简体中文",
+            "warningTitle": "更改语言？",
+            "warningMessage": "更改语言将重置课程进度。您希望继续吗？",
+            "_buttons": {
+                "yes": "是",
+                "no": "否"
+            }
+        },
+        {
+            "_language": "he",
+            "_direction": "rtl",
+            "displayName": "עִברִית",
+            "warningTitle": "האם לשנות שפה?",
+            "warningMessage": "שינוי השפה יאפס את ההתקדמות בקורס. האם ברצונך להמשיך?",
+            "_buttons": {
+                "yes": "כן",
+                "no": "לא"
+            }
+        },
+        {
+          "_language": "hi",
+          "_direction": "ltr",
+          "displayName": "हिंदी",
+          "warningTitle": "भाषा बदलें?",
+          "warningMessage": "भाषा बदलने से कोर्स की प्रगति फिर से सेट हो जाएगी। <br><br>क्या आप आगे बढ़ना चाहेंगे?",
+          "_buttons": {
+              "yes": " हाँ",
+              "no": "नहीं"
+              }
+        },
+        {
+         "_language": "mr",
+         "_direction": "ltr",
+         "displayName": "मराठी",
+         "warningTitle": "भाषा बदलायची ?",
+         "warningMessage": "भाषा बदलल्यामुळे कोर्सची प्रगती रिसेट होईल.<br><br>तुम्हाला पुढे जायचे आहे का?",
+         "_buttons": {
+             "yes": "होय",
+             "no": "नाही"
+             }
+       },
+        {
+             "_language": "id",
+             "_direction": "ltr",
+             "displayName": "Bahasa Indonesia",
+             "warningTitle": "Ganti bahasa?",
+             "warningMessage": "Mengganti bahasa akan mengembalikan kemajuan kursus ke awal. Apakah Anda ingin melanjutkan?",
+             "_buttons": {
+                "yes": "Ya",
+                "no": "Tidak"
+             }
+        },
+        {
+         "_language": "ms",
+         "_direction": "ltr",
+         "displayName": "Malay",
+         "warningTitle": "Tukar bahasa?",
+         "warningMessage": "Penukaran bahasa akan mengeset semula perkembangan kursus.<br><br>Anda mahu teruskan?",
+         "_buttons": {
+             "yes": "Ya",
+             "no": "Tidak"
+             }
+       },
+        {
+                "_language": "tr",
+                "_direction": "ltr",
+                "displayName": "Türkçe",
+                "warningTitle": "Dil değiştirilsin mi?",
+                "warningMessage": "Dili değiştirmek kursun ilerleme durumunu sıfırlayacaktır. Devam etmek istiyor musunuz?",
+                "_buttons": {
+                    "yes": "Evet",
+                    "no": "Hayır"
+                }
+        },
+        {
+              "_language": "nl",
+              "_direction": "ltr",
+              "displayName": "Nederlands",
+              "warningTitle": "De taal veranderen?",
+              "warningMessage": "Het veranderen van de taal zal de cursusvoortgang resetten. Wilt u doorgaan?",
+              "_buttons": {
+                  "yes": "Ja",
+                  "no": "Nee"
+              }
+        },
+        {
+              "_language": "hr",
+              "_direction": "ltr",
+              "displayName": "Hrvatski",
+              "warningTitle": "Promijenite jezik?",
+              "warningMessage": "Promjena jezika resetiratće napredak u tečaju. Želite li nastaviti?",
+              "_buttons": {
+                  "yes": "Da",
+                  "no": "Ne"
+              }
+        },
+        {
+              "_language": "es",
+              "_direction": "ltr",
+              "displayName": "Español europeo",
+              "warningTitle": "¿Cambiar de idioma?",
+              "warningMessage": "Si cambia de idioma, se perderá lo que haya avanzado en el curso. ¿Quiere hacerlo?",
+              "_buttons": {
+                  "yes": "Sí",
+                  "no": "No"
+              }
+        },
+        {
+            "_language": "ru",
+            "_direction": "ltr",
+            "displayName": "Русский",
+            "warningTitle": "Изменить язык?",
+            "warningMessage": "При смене языка информация о ходе выполнения курса не сохранится. Продолжить?",
+            "_buttons": {
+                "yes": "Да",
+                "no": "Нет"
+            }
+        },
+        {
+         "_language": "mk",
+         "_direction": "ltr",
+         "displayName": "Македонски",
+         "warningTitle": "Избери јазик?",
+         "warningMessage": "Менувањето на јазикот ќе го ресетира напредокот на курсот.<br><br>Сакате да продолжите?",
+         "_buttons": {
+             "yes": "Да",
+             "no": "Не"
+             }
+       },
+        {
+            "_language": "pl",
+            "_direction": "ltr",
+            "displayName": "Polski",
+            "warningTitle": "Zmienić język?",
+            "warningMessage": "Zmiana języka spowoduje wyzerowanie postępu kursu. Czy chcesz kontynuować?",
+            "_buttons": {
+                "yes": "Tak",
+                "no": "Nie"
+            }
+        },
+        {
+            "_language": "th",
+            "_direction": "ltr",
+            "displayName": "ไทย",
+            "warningTitle": "เปลี่ยนภาษา?",
+            "warningMessage": "การเปลี่ยนภาษาจะทำให้ระบบกลับไปเริ่มหลักสูตรใหม่อีกครั้ง คุณต้องการดำเนินการต่อหรือไม่?",
+            "_buttons": {
+                "yes": "ใช่",
+                "no": "ไม่ใช่"
+            }
+        },
+        {
+            "_language": "sv",
+            "_direction": "ltr",
+            "displayName": "Svenska",
+            "warningTitle": "Byta språk?",
+            "warningMessage": "Byte av språk kommer att återställa pågående rutt. Vill du fortsätta?",
+            "_buttons": {
+                "yes": "Ja",
+                "no": "Nej"
+            }
+        },
+        {
+          "_language": "fi",
+          "_direction": "ltr",
+          "displayName": "Suomi",
+          "warningTitle": "Vaihdetaanko kieltä?",
+          "warningMessage": "Kielen vaihdon jälkeen joudut aloittamaan kurssin alusta.<br><br>Tahdotko kuitenkin jatkaa?",
+          "_buttons": {
+              "yes": "Kyllä",
+              "no": "Ei"
+              }
+        },
+        {
+            "_language": "esmx",
+            "_direction": "ltr",
+            "displayName": "Español (México)",
+            "warningTitle": "¿Desea cambiar el idioma?",
+            "warningMessage": "Cambiar el idioma reiniciará el curso. ¿Desea continuar?",
+            "_buttons": {
+                "yes": "Sí",
+                "no": "No"
+            }
+        },
+        {
+            "_language": "ja",
+            "_direction": "ltr",
+            "displayName": "日本語",
+            "warningTitle": "言語を変更しますか？",
+            "warningMessage": "言語を変更すると、現在の学習の進捗が失われます。続けますか？",
+            "_buttons": {
+                "yes": "はい",
+                "no": "いいえ"
+            }
+        },
+        {
+            "_language": "ko",
+            "_direction": "ltr",
+            "displayName": "한국어",
+            "warningTitle": "언어를 변경하시겠습니까?",
+            "warningMessage": "언어를 변경하면 과정 진행 상황이 재설정됩니다. 계속하시겠습니까?",
+            "_buttons": {
+                "yes": "예",
+                "no": "아니요"
+            }
+        },
+        {
+            "_language": "et",
+            "_direction": "ltr",
+            "displayName": "Eesti keel",
+            "warningTitle": "Kas vahetada keelt?",
+            "warningMessage": "Keele vahetamisel alustatakse kursust uuesti algusest. Kas soovite jätkata?",
+            "_buttons": {
+                "yes": "Jah",
+                "no": "Ei"
+            }
+        },
+        {
+            "_language": "artn",
+            "_direction": "rtl",
+            "displayName": "العربية (تونس)",
+            "warningTitle": "هل تريد تغيير اللغة؟",
+            "warningMessage": "تغيير اللغة سيعيد ضبط التقدم في الدورة التدريبية. هل تريد المتابعة؟",
+            "_buttons": {
+                "yes": "نعم",
+                "no": "لا"
+            }
+        },
+        {
+            "_language": "ptbr",
+            "_direction": "ltr",
+            "displayName": "Português (Brasil)",
+            "warningTitle": "Alterar idioma?",
+            "warningMessage": "Alterar o idioma redefinirá o progresso do curso. Deseja prosseguir?",
+            "_buttons": {
+                "yes": "Sim",
+                "no": "Não"
+            }
+        }
+    ]
+}
 
     // to be added to the _extensions object in course.json
     "_languagePicker": {
