@@ -78,7 +78,7 @@ The following attributes are set within *config.json*.
 - Language Picker is not yet compatible with the Adapt Authoring Tool.
 
 ----------------------------
-**Version number:**  3.1.0  <a href="https://community.adaptlearning.org/" target="_blank"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo-mrgn-lft.jpg" alt="adapt learning logo" align="right"></a>
+**Version number:**  3.1.1  <a href="https://community.adaptlearning.org/" target="_blank"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo-mrgn-lft.jpg" alt="adapt learning logo" align="right"></a>
 **Framework versions:**  4+   
 **Author / maintainer:** Adapt Core Team / Forked by DeltaNet     
 **Accessibility support:** WAI AA   
