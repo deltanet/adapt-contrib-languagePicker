@@ -10,7 +10,7 @@
   "issues": "https://github.com/deltanet/adapt_framework/issues/new",
   "extension": "languagePicker",
   "displayName": "Language Picker",
-  "description": "An extension to allow the learner to select the course language in multi-language course",
+  "description": "An extension to allow the learner to select the course language in a multi-language course",
   "main": "/js/adapt-languagePicker.js",
   "keywords": [
     "adapt-plugin",

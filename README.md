@@ -15,68 +15,94 @@
 As one of Adapt's *[core extensions](https://github.com/adaptlearning/adapt_framework/wiki/Core-Plug-ins-in-the-Adapt-Learning-Framework#extensions),* **Language Picker** is included with the [installation of the Adapt framework](https://github.com/adaptlearning/adapt_framework/wiki/Manual-installation-of-the-Adapt-framework#installation).
 
 * If **Language Picker** has been uninstalled from the Adapt framework, it may be reinstalled.
-With the [Adapt CLI](https://github.com/adaptlearning/adapt-cli) installed, run the following from the command line:  
-`adapt install adapt-contrib-languagePicker`
+With the [Adapt CLI](https://github.com/adaptlearning/adapt-cli) installed, run the following from the command line:
+    ```console
+    adapt install adapt-contrib-languagePicker
+    ```
 
-    Alternatively, this extension can also be installed by adding the following line of code to the *adapt.json* file:  
-    `"adapt-contrib-languagePicker": "*"`  
-    Then running the command:  
-    `adapt install`  
-    (This second method will reinstall all plug-ins listed in *adapt.json*.)  
+    Alternatively, this extension can also be installed by adding the following line of code to the *adapt.json* file:
+    ```json
+    "adapt-contrib-languagePicker": "*"
+    ```
+    Then running the command:
+    ```console
+    adapt install
+    ```
+    (This second method will reinstall all plug-ins listed in *adapt.json*.)
 
 <div float align=right><a href="#top">Back to Top</a></div>
 
 ## Settings Overview
 
-**Language Picker** is configured in *config.json* with the attributes that follow. The attributes are properly formatted as JSON in [*example.json*](https://github.com/adaptlearning/adapt-contrib-languagePicker/blob/master/example.json).
+This extension is configured in *config.json* with the attributes that follow. The attributes are properly formatted as JSON in [*example.json*](https://github.com/deltanet/adapt-contrib-languagePicker/blob/master/example.json).
 
-### Attributes
+## Attributes
 
-The following attributes are set within *config.json*.  
+The following attributes are set within *config.json*.
 
-**\_languagePicker** (object): The languagePicker object that contains values for **\_isEnabled**, **title**, **displayTitle**, **body**, **\_showOnCourseLoad**, **\_languagePickerIconClass**, **\_restoreStateOnLanguageChange**, and **\_languages**.
+### \_languagePicker (object):
+The languagePicker object that contains values for `_isEnabled`, `title`, `displayTitle`, `body`, `_showOnCourseLoad`, `_languagePickerIconClass` and `_restoreStateOnLanguageChange` settings and the `_languages` array.
 
->**\_isEnabled** (boolean): Turns the **Language Picker** extension on and off. Acceptable values are `true` and `false`.
+#### \_isEnabled (boolean):
+Enables/disables this extension. The default value is `false`. Set this to `true` to enable this extension.
 
->**title** (string): Browser window title text. For example, "Language selection".
+#### title (string):
+Browser window title text. For example, "Language selection".
 
->**displayTitle** (string): Header text. For example, "Please select a language."
+#### displayTitle (string):
+Header text. For example, "Please select a language."
 
->**body** (string): Introductory or explanatory text. For example, "Welcome to ACME Learning. This course is available in several languages. Please make a selection. "
+#### body (string):
+Introductory or explanatory text. For example, "Welcome to ACME Learning. This course is available in several languages. Please make a selection."
 
->**\_showOnCourseLoad** (boolean): Determines whether the language picker will be displayed on course load. If set to false, the course will load with the default language selected and the user will need to use the icon in the navigation bar to change languages.
+#### \_showOnCourseLoad (boolean):
+Determines whether the language picker will be displayed on course load. If set to `false`, the course will load with the default language selected and the user will need to use the icon in the navigation bar to change languages. The default value is `true`.
 
->**\_languagePickerIconClass** (string): The class defined here will define the icon of the language-picker in the navigation bar. The vanilla theme supports the following class-names by default: "icon-globe", "icon-language-1", "icon-language-2". The default value for this attribute is "icon-language-2".    
+#### \_languagePickerIconClass (string):
+Defines which icon will be displayed in the navigation bar. The [vanilla theme](https://github.com/adaptlearning/adapt-contrib-vanilla) supports the following icon styles: `"icon-globe"`, `"icon-language-1"`, `"icon-language-2"`. The default value for this setting is `"icon-language-2"`.
 
->**\_restoreStateOnLanguageChange** (boolean): Determines whether or not the language picker will try to restore the 'state' of the course when the user changes language. It is advised that you only set this to `true` if all course languages have exactly the same structure; if they do not, some loss of tracking data will occur. If set to `false`, all tracking data will be cleared when the user switches language - the warningMessage (see below) should be used to warn the user of this.
+#### \_restoreStateOnLanguageChange (boolean):
+Determines whether or not the language picker will try to restore the 'state' of the course when the user changes language. It is advised that you only set this to `true` if all course languages have exactly the same structure; if they do not, some loss of tracking data will occur. If set to `false`, all tracking data will be cleared when the user switches language - the warningMessage (see below) should be used to warn the user of this. The default value is `false`.
 
->**\_languages** (object):  The languages attribute group contains properties related to the available languages.   It contains values for **\_language**, **\_direction**, **displayName**, **warningTitle**, **warningMessage**, and **\_buttons**.  
+#### \_languages (array):
+The languages array contains the list of the available languages and the various settings associated with each. Each entry in the array should be an object, containing the following settings:
 
->>**_language** (string): This text must match the name of the language-specific folder located in the course root, for example, "en" from *course/en*. It is used as the value for the HTML `lang` attribute. It is highly recommended that codes for web languages be used. Reference a source such as the [IANA Language Subtag Registry](http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).
+##### \_language (string):
+This text must match the name of the language-specific folder located in the course root, for example, `"en"` from *course/en*. It is used as the value for the HTML `lang` attribute. It is highly recommended that codes for web languages be used. Reference a source such as the [IANA Language Subtag Registry](http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).
 
->>**_direction** (string): Specifies the value of the HTML `dir` attribute and, consequently, the base direction of text. Acceptable values are `"rtl"` (right-to-left) and `"ltr"` (left-to-right).
+##### \_direction (string):
+Specifies the value of the HTML `dir` attribute and, consequently, the base direction of text. Acceptable values are `"rtl"` (right-to-left) and `"ltr"` (left-to-right). The default value is `"ltr"`.
 
->>**displayName** (string): Use this text to identify the full name of the language. This value is used as the button label.  
+##### \_isDisabled (boolean):
+Setting this to `true` allows the language to be shown in the list but in a 'disabled' state (so it cannot be selected). This can be useful in situations where localisation into a particular language has not yet been completed. The default value is `false`.
 
->>**warningTitle** (string): This text appears as the header of the dialog confirming the learner's intent to change languages, for example, "Change language?".
+##### displayName (string):
+The display name of the language. This value is used as the button label.
 
->>**warningMessage** (string): This text appears as the body of the dialog confirming the learner's intent to change languages, for example, "Changing the language will reset course progress.&lt;br&gt;&lt;br&gt;Would you like to proceed?".
+##### warningTitle (string):
+This text appears as the header of the dialog confirming the learner's intent to change languages, for example, "Change language?".
 
->>**\_buttons** (object): The buttons attribute group stores the label values for the dialog buttons. It contains values for **yes** and **no**.  
+##### warningMessage (string):
+This text appears as the body of the dialog confirming the learner's intent to change languages, for example, "Changing the language will reset course progress.&lt;br&gt;&lt;br&gt;Would you like to proceed?".
 
->>>**yes** (string): Label for button that confirms the learner's intent to switch languages.
+##### \_buttons (object):
+The buttons object contains the following settings:
 
->>>**no** (string): Label for button that cancels the switch languages dialog.   
+###### yes (string):
+Label for the button that confirms the learner's intent to switch languages.
+
+###### no (string):
+Label for the button that cancels the switch languages dialog.
 
 <div float align=right><a href="#top">Back to Top</a></div>
 
 ## Limitations
-
 - If the [**Spoor**](https://github.com/adaptlearning/adapt-contrib-spoor) extension is disabled (or not installed), **Language Picker** will not remember the learner's language choice from the previous session.
-
-- Switching languages during an [**Assessment**](https://github.com/adaptlearning/adapt-contrib-assessment) will reset assessment attempts.  
-
+- Switching languages during an [**Assessment**](https://github.com/adaptlearning/adapt-contrib-assessment) will reset assessment attempts.
 - Language Picker is not yet compatible with the Adapt Authoring Tool.
+
+## Notes
+If the [**Spoor**](https://github.com/adaptlearning/adapt-contrib-spoor) extension is enabled and the course is being run from an <abbr title='Learning Management System'>LMS</abbr> that has support for the `cmi.student_preference.language` data model element, the spoor extension will record the learner's choice of language to that data model element. Note that this is for reporting purposes only: as support for that data model element is not mandatory in SCORM 1.2 it cannot be relied upon for saving/restoring the learner's choice of language - the `cmi.suspend_data` data model element will be used for that, even when `cmi.student_preference.language` is available.
 
 ----------------------------
 **Version number:**  4.0.0  <a href="https://community.adaptlearning.org/" target="_blank"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo-mrgn-lft.jpg" alt="adapt learning logo" align="right"></a>  
