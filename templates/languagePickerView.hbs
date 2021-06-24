@@ -16,6 +16,14 @@
   </div>
   {{/if}}
 
+  {{#if instruction}}
+  <div class="languagepicker__instruction">
+    <div class="languagepicker__instruction-inner">
+      {{{compile instruction}}}
+    </div>
+  </div>
+  {{/if}}
+
   <div class="languagepicker__languages inrow-{{_inRow}}">
     <div class="languagepicker__languages-inner">
 

@@ -56,7 +56,7 @@
                   "type": "string",
                   "required": false,
                   "default": "",
-                  "title": "Language Picker Title",
+                  "title": "Display Title",
                   "inputType": "Text",
                   "validators": [],
                   "help": "Header text for the Language Picker"
@@ -65,10 +65,17 @@
                   "type": "string",
                   "required": false,
                   "default": "",
-                  "title": "Language Picker Body text",
+                  "title": "Body",
+                  "inputType": "TextArea",
+                  "validators": []
+                },
+                "instruction": {
+                  "type": "string",
+                  "required": false,
+                  "default": "",
+                  "title": "Instruction text",
                   "inputType": "Text",
-                  "validators": [],
-                  "help": "Introductory or explanatory text for the Language Picker"
+                  "validators": []
                 },
                 "_showOnCourseLoad": {
                   "type": "boolean",
